@@ -1,0 +1,7 @@
+.idea
+/.idea
+/.venv
+.venv
+src/data
+/src/data
+/src/__pycache__
