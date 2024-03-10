@@ -9,3 +9,5 @@ src/data
 /src/client_secret.json
 /src/credentials_module.json
 performace.txt
+/src/settings.yaml
+
