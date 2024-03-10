@@ -1,4 +1,4 @@
-from Oauth import Oauth
+from src.modules.Oauth import Oauth
 
 
 def getdata(file_id, credentials, destination):
@@ -7,7 +7,7 @@ def getdata(file_id, credentials, destination):
     service = service.login()
 
     # Descargar el archivo zip
-    file = service.CreateFile({'id':file_id})
+    file = service.CreateFile({'id': file_id})
     file_name = file['title']
     file.GetContentFile(destination+file_name)
     return file_name
