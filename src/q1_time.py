@@ -1,7 +1,7 @@
 from typing import List, Tuple
 from datetime import datetime
 import multiprocessing
-from collections import defaultdict
+from measure_performance import measure_performance
 from format_date import format_date
 from Readjson import read_json
 
@@ -19,9 +19,10 @@ def process_tweets(data_chunk):
             print(f"Error: Clave faltante en tweet: {e}")
     return date_counts, user_counts
 
+@measure_performance
 def q1_time(file_path: str) -> List[Tuple[datetime.date, str]]:
     data = read_json(file_path)
-    chunk_size = 1000  # Tamaño del chunk
+    chunk_size = 3000  # Tamaño del chunk
     results = []
 
     try:

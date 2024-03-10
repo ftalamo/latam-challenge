@@ -1,11 +1,13 @@
 from typing import List, Tuple
 from collections import Counter
 from Readjson import read_json
-from memory_profiler import profile
+from measure_performance import measure_performance
 import re
 import multiprocessing
 from functools import partial
 
+
+@measure_performance
 def process_tweet(tweet, emoji_pattern):
     text = tweet.get('content', '')
     emojis = emoji_pattern.findall(text)

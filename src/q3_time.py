@@ -2,9 +2,10 @@ import multiprocessing
 from typing import List, Tuple
 from collections import Counter
 from Readjson import read_json
-from memory_profiler import profile
+from measure_performance import measure_performance
 
 
+@measure_performance
 def process_tweet(tweet):
     mentioned_counter = Counter()
     if 'mentionedUsers' in tweet:

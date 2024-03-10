@@ -3,8 +3,10 @@ from collections import defaultdict
 from datetime import datetime
 from Readjson import read_json
 from format_date import format_date
+from measure_performance import measure_performance
 
 
+@measure_performance
 def q1_memory(file_path: str) -> List[Tuple[datetime.date, str]]:
     data = read_json(file_path)
     date_user_counts = defaultdict(lambda: defaultdict(int))
