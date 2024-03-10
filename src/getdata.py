@@ -1,9 +1,14 @@
-import os
+from Oauth import Oauth
 
 
-def getdata(path, name):
-    """
-       Verifica si existe un archivo ZIP en un directorio.
-"""
-    file_path = os.path.join(path,name)
-    return os.path.isfile(file_path) and file_path.endswith('.zip')
+def getdata(file_id, credentials, destination):
+
+    service = Oauth(credentials)
+    service = service.login()
+
+    # Descargar el archivo zip
+    file = service.CreateFile({'id':file_id})
+    file_name = file['title']
+    file.GetContentFile(destination+file_name)
+    return file_name
+
