@@ -6,3 +6,6 @@ src/data
 /src/data
 /src/__pycache__
 /src/modules/__pycache__
+/src/client_secret.json
+/src/credentials_module.json
+performace.txt
