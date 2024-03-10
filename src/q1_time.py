@@ -1,9 +1,9 @@
 from typing import List, Tuple
 from datetime import datetime
 import multiprocessing
-from measure_performance import measure_performance
-from format_date import format_date
-from Readjson import read_json
+from modules.measure_performance import measure_performance
+from modules.format_date import format_date
+from modules.Readjson import read_json
 
 def process_tweets(data_chunk):
     date_counts = {}

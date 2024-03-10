@@ -1,8 +1,8 @@
 from typing import List, Tuple
 from collections import Counter
-from Readjson import read_json
+from modules.Readjson import read_json
 import re
-from measure_performance import measure_performance
+from modules.measure_performance import measure_performance
 
 
 @measure_performance

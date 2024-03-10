@@ -1,19 +1,18 @@
 from typing import List, Tuple
 from collections import Counter
-from Readjson import read_json
-from measure_performance import measure_performance
+from modules.Readjson import read_json
+from modules.measure_performance import measure_performance
 import re
 import multiprocessing
 from functools import partial
 
 
-@measure_performance
 def process_tweet(tweet, emoji_pattern):
     text = tweet.get('content', '')
     emojis = emoji_pattern.findall(text)
     return emojis
 
-
+@measure_performance
 def q2_time(file_path: str) -> List[Tuple[str, int]]:
     data = read_json(file_path)
     emoji_counter = Counter()

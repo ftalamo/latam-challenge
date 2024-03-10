@@ -1,11 +1,10 @@
 import multiprocessing
 from typing import List, Tuple
 from collections import Counter
-from Readjson import read_json
-from measure_performance import measure_performance
+from modules.Readjson import read_json
+from modules.measure_performance import measure_performance
 
 
-@measure_performance
 def process_tweet(tweet):
     mentioned_counter = Counter()
     if 'mentionedUsers' in tweet:
@@ -17,6 +16,8 @@ def process_tweet(tweet):
                     mentioned_counter[username] += 1
     return mentioned_counter
 
+
+@measure_performance
 def q3_time(file_path: str) -> List[Tuple[str, int]]:
     data = read_json(file_path)
     mentioned_counter = Counter()
