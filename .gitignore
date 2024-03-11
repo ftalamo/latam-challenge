@@ -8,7 +8,7 @@ src/data
 /src/modules/__pycache__
 /src/client_secret.json
 /src/credentials_module.json
-performace.txt
+/performace.txt
 /src/settings.yaml
 src/test/__pycache__
 /src/test/__pycache__
