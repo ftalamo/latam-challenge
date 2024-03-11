@@ -10,4 +10,5 @@ src/data
 /src/credentials_module.json
 performace.txt
 /src/settings.yaml
-
+src/test/__pycache__
+/src/test/__pycache__
