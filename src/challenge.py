@@ -1,6 +1,6 @@
 import os
-from getdata import getdata
-from unzip import unzip_file
+from modules.getdata import getdata
+from modules.unzip import unzip_file
 from q1_memory import q1_memory
 from q1_time import q1_time
 from q2_memory import q2_memory
