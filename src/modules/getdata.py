@@ -1,4 +1,4 @@
-from Oauth import Oauth
+from src.modules.Oauth import Oauth
 
 
 def getdata(file_id, credentials, destination):
